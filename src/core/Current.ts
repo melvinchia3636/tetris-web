@@ -253,6 +253,7 @@ export class Current {
   }
 
   hardDrop() {
+    while (!this.isPlaced()) this.softDrop();
   }
 
   softDrop() {

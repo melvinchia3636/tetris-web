@@ -21,6 +21,9 @@ function checkKeyMove(event: KeyboardEvent) {
   if (event.key === "w") {
     current.rotate();
   }
+  if (event.key === " ") {
+    current.hardDrop();
+  }
 }
 
 function init() {
