@@ -4,18 +4,20 @@ import { blocks } from "../constants/blocks";
 import { COLOR } from '../constants/colors';
 
 export class Current {
+  type: number;
   color: COLOR;
   tiles: (Tile | null)[][];
   generation: number;
 
-  constructor(generation: number) {
+  constructor(type: number, generation: number) {
+    this.type = type;
     this.color = null;
     this.tiles = [];
     this.generation = generation;
   }
 
   generate() {
-    const block = blocks[Math.floor(Math.random() * blocks.length)];
+    const block = blocks[this.type];
     this.color = block.color;
 
     const center = Math.floor((BOARD_WIDTH - block.pattern[0].length) / 2);
