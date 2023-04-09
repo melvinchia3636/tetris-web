@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "LCD";
+  src: url("/LCD.ttf");
+}
+
 * {
   font-family: "Rubik", sans-serif;
 }
